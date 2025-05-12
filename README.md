@@ -21,29 +21,31 @@ engineering best practices.
 
 ## Project Structure
 
+```text
 db_migration_project/
-├── migrations/ # Alembic directory for new_good_db
-│ ├── versions/ # Alembic revision files
-│ ├── env.py # Alembic environment script
-│ └── script.py.mako # Template for new revisions
-├── models_new/ # SQLAlchemy models for the new DB (new_good_db)
-│ ├── init.py
-│ ├── base.py # Declarative base for new models
-│ ├── order_models.py
-│ ├── product_models.py
-│ └── user_models.py
-├── models_old/ # SQLAlchemy models for the old DB (old_bad_db)
-│ └── old_models.py
-├── scripts/ # Project utility scripts
-│ ├── populate_old_db.py # To create and populate old_bad_db
-│ ├── migrate_data.py # Direct migration script
-│ └── migrate_data_pandas.py # Migration script using Pandas
-├── .env # Environment variables
-├── .gitignore # Specifies files to ignore with Git
-├── alembic.ini # Alembic configuration file
-├── config.py # Loads config and DB URLs
-├── requirements.txt # Project Python dependencies
-└── README.md # This file
+├── migrations/                # Alembic directory for new_good_db
+│   ├── versions/             # Alembic revision files
+│   ├── env.py                # Alembic environment script
+│   └── script.py.mako        # Template for new revisions
+├── models_new/               # SQLAlchemy models for the new DB (new_good_db)
+│   ├── __init__.py
+│   ├── base.py               # Declarative base for new models
+│   ├── order_models.py
+│   ├── product_models.py
+│   └── user_models.py
+├── models_old/               # SQLAlchemy models for the old DB (old_bad_db)
+│   └── old_models.py
+├── scripts/                  # Project utility scripts
+│   ├── populate_old_db.py    # To create and populate old_bad_db
+│   ├── migrate_data.py       # Direct migration script
+│   └── migrate_data_pandas.py # Migration script using Pandas
+├── .env                      # Environment variables (DO NOT commit to Git)
+├── .gitignore                # Specifies files to ignore with Git
+├── alembic.ini               # Alembic configuration file
+├── config.py                 # Loads config and DB URLs
+├── requirements.txt          # Project Python dependencies
+└── README.md                 # This file
+```
 
 ## Environment Setup
 
