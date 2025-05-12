@@ -28,8 +28,7 @@ logger = logging.getLogger(__name__)
 
 # Motores y Sesiones
 old_db_engine = create_engine(OLD_DATABASE_URL)
-new_db_engine = create_engine(
-    "postgresql://content_guardian_db_user:boonxuwcGZnQG2AnKN0qBPMkGogJdBWS@dpg-d0dtosumcj7s73d4oat0-a.virginia-postgres.render.com/try_pandas")
+new_db_engine = create_engine("")
 NewSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=new_db_engine)
 
 # --- MAPAS GLOBALES PARA IDs (aún necesarios si no se guardan en DFs) ---
